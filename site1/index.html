@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Çekiliş</title>
+    <style>
+        .talihli {
+            background-color: green;
+            box-shadow: 5px 5px 5px rgb(0, 255, 0, 0.5);
+            color: rgba(0, 255, 0, 1);
+            transition: font-size 2s;
+            font-size: 2em;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Çekiliş</h1>
+    <input id="giris" type="text">
+    <button onclick="ekle()">Ekle</button>
+    <ul id="liste"></ul>
+    <button onclick="cekilis()">Çeklişi Yap</button>
+    <p>Silmek için isme çift tıkla</p>
+    <script>
+        var kisiler = ["Galip", "Yiğit", "Emine", "Faruk", "Arda", "Berdan", "Bircan", "Gizem", "Hasret", "Emre", "Oğuzhan"];
+        var talihli = 1;
+        var kisi = document.getElementById(`${talihli}`);
+        function listele() {
+            var kisiListe = document.getElementById("liste");
+            kisiListe.innerHTML = "";
+            for (let i = 0; i < kisiler.length; i++) {
+                kisiListe.innerHTML += "<li ondblclick='sil(this)' id=" + `${i}` + ">" + kisiler[i] + "</li>";
+            }
+        }
+        listele();
+        function cekilis() {
+            var oncekiKisi = document.getElementById(`${talihli}`);
+            oncekiKisi.classList.remove("talihli");
+            talihli = Math.floor(Math.random() * kisiler.length);
+            var kisi = document.getElementById(`${talihli}`);
+            kisi.classList.add("talihli");
+        }
+        function ekle() {
+            var eklenecek = document.getElementById("giris");
+            kisiler.push(eklenecek.value);
+            listele();
+            eklenecek.value = "";
+        }
+        function sil(item) {
+            kisiler.splice(item.id, 1);
+            listele();
+        }
+    </script>
+</body>
+
+</html>
