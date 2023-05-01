@@ -4,12 +4,13 @@ body {
     background-color: black;
     width: calc(100vw - 2px);
     height: calc(100vh - 2px);
+    font-size: calc(100vw / 20);
 }
 
 div {
     width: inherit;
     height: inherit;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     display: flex;
     justify-content: center;
     align-items: center;
