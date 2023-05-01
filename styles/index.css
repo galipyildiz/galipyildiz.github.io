@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    border: 1px solid palevioletred;
+    background-color: black;
+    width: calc(100vw - 2px) ;
+    height: calc(100vh - 2px) ;
+}
+div{
+    width: inherit;
+    height: inherit;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+}
