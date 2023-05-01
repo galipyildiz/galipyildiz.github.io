@@ -1,16 +1,40 @@
-body{
+body {
     margin: 0;
     border: 1px solid palevioletred;
     background-color: black;
-    width: calc(100vw - 2px) ;
-    height: calc(100vh - 2px) ;
+    width: calc(100vw - 2px);
+    height: calc(100vh - 2px);
 }
-div{
+
+div {
     width: inherit;
     height: inherit;
-    font-size: 4rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: wheat;
+}
+
+a {
+    color: #333;
+    /* changes the default link color */
+    text-decoration: none;
+    /* removes the underline from the link */
+    border-bottom: 2px solid #333;
+    /* adds a bottom border to the link */
+    /* transition: border-bottom 0.3s ease; */
+    transition: all 0.3s ease;
+    /* adds a transition effect to the border */
+}
+
+a:hover {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+    /* changes the border color when the link is hovered */
+}
+
+.myDiv {
+    display: flex;
+    flex-direction: column;
 }
