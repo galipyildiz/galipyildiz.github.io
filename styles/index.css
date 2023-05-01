@@ -9,7 +9,7 @@ body {
 div {
     width: inherit;
     height: inherit;
-    font-size: 3rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
