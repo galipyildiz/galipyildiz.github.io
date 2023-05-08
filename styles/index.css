@@ -4,38 +4,30 @@ body {
     background-color: black;
     width: calc(100vw - 2px);
     height: calc(100vh - 2px);
-    font-size: calc(100vw / 20);
-}
-
-div {
-    width: inherit;
-    height: inherit;
-    /* font-size: 1.2rem; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: wheat;
 }
 
 a {
-    color: #333;
-    /* changes the default link color */
+    color: #9c9c9c;
     text-decoration: none;
-    /* removes the underline from the link */
     border-bottom: 2px solid #333;
-    /* adds a bottom border to the link */
-    /* transition: border-bottom 0.3s ease; */
     transition: all 0.3s ease;
-    /* adds a transition effect to the border */
 }
-
 a:hover {
     border-bottom: 2px solid #007bff;
     color: #007bff;
-    /* changes the border color when the link is hovered */
 }
 
-.myDiv {
+.projectDiv {
+    width: inherit;
+    height: inherit;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    font-size: calc(100vw / 20);
+}
+.socialDiv{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
