@@ -28,9 +28,14 @@ a:hover {
     font-size: calc(100vw / 20);
 }
 
+.linkedinDiv {
+    position: fixed;
+    bottom: 5px;
+    right: -57px;
+}
+
 .socialDiv {
     position: fixed;
     bottom: 5px;
-    right: 5px;
-    margin-right: 5px;
+    left: 5px;
 }
