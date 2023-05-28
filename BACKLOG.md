@@ -7,6 +7,7 @@
 - As a user, I want to be able to reset my password.
 
 ## Tasks
+- [ ] Has pagerepos tag with span.
 - [ ] Write bandwith technical paper.
 - [ ] Create about my self directory.
 
