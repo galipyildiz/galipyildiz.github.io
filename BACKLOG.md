@@ -7,11 +7,7 @@
 - As a user, I want to be able to reset my password.
 
 ## Tasks
-- [ ] Create a registration form
-- [ ] Implement account creation logic
-- [ ] Design and implement a login page
-- [ ] Develop password reset functionality
-- [ ] Write unit tests for user authentication
+- [ ] Write bandwith technical paper.
 
 ## Bugs
 
