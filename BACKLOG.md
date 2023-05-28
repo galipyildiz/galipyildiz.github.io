@@ -8,6 +8,7 @@
 
 ## Tasks
 - [ ] Write bandwith technical paper.
+- [ ] Create about my self directory.
 
 ## Bugs
 
