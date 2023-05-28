@@ -36,6 +36,7 @@ const listRepos = (repos) => {
             appendSpanReadmeListItem(listItem);
         }
         else if (repo.name == githubIOWebPageRepoName) {
+            listItem.href = repo.svn_url;
             appendSpanGithubIoWebPageListItem(listItem);
         }
 
