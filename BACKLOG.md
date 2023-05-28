@@ -7,7 +7,6 @@
 - As a user, I want to be able to reset my password.
 
 ## Tasks
-
 - [ ] Create a registration form
 - [ ] Implement account creation logic
 - [ ] Design and implement a login page
@@ -21,5 +20,4 @@
 
 ## Features
 
-- [ ] Add support for social media login (e.g., Google, Facebook)
-- [ ] Implement two-factor authentication for enhanced security
+- [ ] Write text in ASCII art format using the console log function.
