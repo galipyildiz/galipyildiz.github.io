@@ -1,10 +1,12 @@
-const readmeMdRepoName = 'galipyildiz';
-const githubIOWebPageRepoName = 'galipyildiz.github.io';
+const readmeMdRepoName = "galipyildiz";
+const githubIOWebPageRepoName = "galipyildiz.github.io";
 const myGithubName = "galipyildiz";
+const technicalPapersDirectoryName = "technicalPapers";
 
 document.addEventListener("DOMContentLoaded", () => {
     updateConsole();
     getGithubRepos();
+    getTechnicalPapers();
 });
 
 const getGithubRepos = async () => {
@@ -40,7 +42,7 @@ const listRepos = (repos) => {
         projectDiv.appendChild(listItem);
 
     }
-}
+};
 
 const getListItemUrl = (repo) => {
     if (repo.has_pages) {
@@ -74,6 +76,44 @@ const appendSpanReadmeListItem = (listItem) => {
     listItem.appendChild(spanItem);
 };
 
+const getTechnicalPapers = async () => {
+    let endPoint = `https://api.github.com/repos/galipyildiz/galipyildiz.github.io/contents/${technicalPapersDirectoryName}`;
+    let response = await fetch(endPoint);
+    if (response.ok) {
+        let papers = await response.json();
+        listPapers(papers);
+    }
+};
+
+const listPapers = (papers) => {
+    let papersDiv = document.getElementById('papers');
+
+    for (const paper of papers) {
+        let paperName = formatPaperName(paper.name);
+        let listItem = document.createElement('a');
+        listItem.textContent = `${paperName}`;
+        listItem.className += ' textColor'
+
+        let url = getPaperUrl(paper);
+        listItem.href = url;
+
+        papersDiv.appendChild(listItem);
+
+    }
+};
+
+const getPaperUrl = (paper) => {
+    //TODO
+    return paper.url;
+};
+
+
+const formatPaperName = (filename) => {
+    let capitalizedFilename = filename.charAt(0).toUpperCase() + filename.slice(1);
+    capitalizedFilename = capitalizedFilename.replace(".md", "");
+    return capitalizedFilename;
+}
+
 const updateConsole = () => {
-   console.log('Hello World!');
+    console.log('Hello World!');
 };
