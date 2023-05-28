@@ -103,10 +103,24 @@ const listPapers = (papers) => {
 };
 
 const getPaperUrl = (paper) => {
-    //TODO
-    return paper.url;
+    if (window.location.hostname == '127.0.0.1') {
+        return getLocalPaperUrl(paper.name);
+    }
+    else {
+        return getRemotePaperUrl(paper.name);
+    }
 };
 
+const getRemotePaperUrl = (paperName) => {
+    let replacedName = paperName.replace(".md", ".html");
+    let url = `https://galipyildiz.github.io/${technicalPapersDirectoryName}/${replacedName}`;
+    return url;
+};
+
+const getLocalPaperUrl = (paperName) => {
+    let url = `http://127.0.0.1:5500/${technicalPapersDirectoryName}/${paperName}`;
+    return url;
+};
 
 const formatPaperName = (filename) => {
     let capitalizedFilename = filename.charAt(0).toUpperCase() + filename.slice(1);
