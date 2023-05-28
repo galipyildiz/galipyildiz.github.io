@@ -75,5 +75,5 @@ const appendSpanReadmeListItem = (listItem) => {
 };
 
 const updateConsole = () => {
-    console.log('hello world');
+   console.log('Hello World!');
 };
