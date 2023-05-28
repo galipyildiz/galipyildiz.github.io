@@ -20,4 +20,4 @@
 
 ## Features
 
-- [ ] Technical Papers from md in galipyildiz.github.io folder
+- [X] Technical Papers from md in galipyildiz.github.io folder
