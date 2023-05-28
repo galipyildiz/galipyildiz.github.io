@@ -6,26 +6,25 @@ body {
     height: calc(100vh - 2px);
 }
 
-a {
-    color: #9c9c9c;
-    text-decoration: none;
-    border-bottom: 2px solid #333;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    border-bottom: 2px solid #007bff;
-    color: #007bff;
-}
-
-.projectDiv {
-    width: inherit;
-    height: inherit;
+.container {
     display: flex;
+    flex-direction: column;
+}
+
+.technicalPapersDiv {
+    display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: calc(100vw / 20);
+}
+
+.projectDiv {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .linkedinDiv {
@@ -38,4 +37,27 @@ a:hover {
     position: fixed;
     bottom: 5px;
     left: 5px;
+}
+
+.flexFontSize {
+    font-size: calc(100vw / 20);
+}
+
+.textColor {
+    color: #9c9c9c;
+}
+
+.underLine {
+    border-bottom: 1px solid wheat;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
 }

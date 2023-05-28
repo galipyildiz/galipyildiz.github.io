@@ -21,4 +21,4 @@
 ## Features
 
 - [ ] Write text in ASCII art format using the console log function.
-- [ ] Technical Papers from md.
+- [ ] Technical Papers from md in galipyildiz.github.io folder
