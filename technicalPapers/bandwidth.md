@@ -1,11 +1,57 @@
-### Bandwidth Technical Paper
+**Bağlantı Hızının Temelinde: Bandwidth**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit libero nisi, vitae laoreet ex consequat in. Maecenas rutrum erat quis nunc viverra, et bibendum ex sagittis. Duis feugiat odio vitae posuere egestas. Vivamus id purus at justo iaculis rhoncus sed eu lectus. Quisque egestas vitae felis in interdum. Praesent at enim ac eros consequat mattis. Ut et lacinia odio.
+Günümüzün hızla dijitalleşen dünyasında, bilgi transferi ve iletişim önemli bir rol oynar. Bu iletişim sürecinde, bilgisayar ağlarının performansını belirleyen kritik bir ölçüt bulunmaktadır: "bandwidth" veya Türkçe karşılığıyla "bant genişliği". Bu makalede, bant genişliği kavramını anlamak için temel bilgilere odaklanacağız.
 
-Etiam eget augue quis elit luctus viverra ac at augue. Quisque hendrerit ultrices turpis ac porta. Sed at felis metus. Fusce at est interdum, efficitur tellus non, sodales risus. Curabitur nec lectus auctor, mollis massa ullamcorper, tempor augue. Nullam in rhoncus libero. Sed vel sem et purus ultricies condimentum a et felis. Duis quis lobortis ligula, ut commodo est. Morbi eu nisi risus. Pellentesque mollis tempus nisl, vitae commodo lectus eleifend non. Pellentesque id molestie tortor. Cras ut congue tortor. In ac lacinia est. Fusce egestas diam mattis diam congue, eu viverra elit pulvinar. Proin nec varius enim, quis venenatis sem.
+**Bant Genişliği Nedir?**
 
-Donec at orci purus. Ut ac urna enim. Duis tristique nulla sed tempus vehicula. Ut eget ligula congue, placerat nisl aliquet, bibendum turpis. Pellentesque ullamcorper bibendum lacus eget sagittis. Nulla volutpat mauris sit amet urna ullamcorper, non dapibus quam finibus. In urna mauris, malesuada at finibus quis, iaculis et quam. Suspendisse at massa erat. Nam iaculis, libero et lobortis feugiat, urna velit interdum sapien, id lobortis odio diam non tellus. Sed pharetra sollicitudin maximus. Aliquam imperdiet rutrum turpis. Nunc consectetur nulla semper porta suscipit. Proin varius nisl vel iaculis interdum.
+Bant genişliği, bir iletişim kanalının veya ağ bağlantısının belirli bir süre içinde taşıyabileceği maksimum veri miktarını ifade eder. Genellikle saniye başına düşen bit sayısıyla ölçülür ve "bit per second" (bps) birimiyle ifade edilir. Yani, bir ağ bağlantısının 100 Mbps bant genişliği, o bağlantının bir saniye içinde 100 megabit veri taşıyabileceği anlamına gelir.
 
-Nulla enim leo, maximus eget vulputate ullamcorper, porta a purus. Suspendisse potenti. Proin tristique lorem lectus, finibus scelerisque velit viverra eu. Nunc mi est, finibus vel imperdiet et, ultrices nec sem. Quisque dapibus malesuada interdum. Aenean consectetur blandit sapien. Vivamus semper fermentum nunc, a elementum tellus.
+**Bant Genişliği Türleri**
 
-Maecenas blandit feugiat enim, ut ultrices nisi interdum id. Nulla eget pulvinar nibh. Etiam vel nunc a felis ullamcorper lobortis nec aliquet lectus. Phasellus sit amet imperdiet ex. Donec placerat aliquam pretium. Morbi eu leo at eros tincidunt euismod. Maecenas tristique odio blandit justo dictum, sed faucibus diam egestas. Quisque viverra est nec risus pharetra, vel porttitor sapien sodales. Suspendisse sodales suscipit justo sed convallis. Nulla et massa ac metus sollicitudin rhoncus. Duis vitae odio felis. Donec molestie sollicitudin mollis. Etiam convallis iaculis dolor sagittis hendrerit. Aliquam blandit commodo arcu. Nam aliquet lectus pulvinar augue interdum, ut rhoncus leo condimentum.
+1. **Upstream ve Downstream:**
+   - Upstream, kullanıcının cihazından ağa doğru veri transferini ifade eder.
+   - Downstream ise ağdan kullanıcının cihazına doğru veri transferini ifade eder.
+   
+2. **Symmetric ve Asymmetric:**
+   - Symmetric bant genişliği, yükleme (upload) ve indirme (download) hızlarının eşit olduğu durumu belirtir.
+   - Asymmetric bant genişliği ise yükleme ve indirme hızlarının farklı olduğu durumu belirtir. Örneğin, ev internet bağlantıları genellikle asymmetric bant genişliği kullanır.
+
+**Bant Genişliği ve İletişim Performansı**
+
+Bir ağın bant genişliği, genel iletişim performansını etkiler. Yüksek bant genişliği, daha hızlı veri iletimine ve daha iyi bir ağ performansına olanak tanır. Bu özellik, özellikle büyük veri transferleri gerektiren uygulamalarda, çevrimiçi oyunlarda ve HD video akışlarında önemlidir.
+
+Ancak, bant genişliği yalnızca bir etken değildir. Ağın genel performansını etkileyen diğer faktörler arasında ağın topolojisi, kullanılan ekipmanın kalitesi, trafiğin yönetimi ve güvenlik önlemleri de bulunmaktadır.
+
+**Sonuç olarak**
+
+Bant genişliği, günümüzdeki dijital yaşamın temel taşlarından biridir. İnternet kullanımının artması, yüksek veri transfer hızlarının önemini daha da vurgulamaktadır. Ancak, bir ağın performansını değerlendirirken bant genişliği, dikkate alınması gereken tek faktör değildir. Tüm bu unsurlar bir araya geldiğinde, sağlam bir iletişim altyapısı ve yüksek performanslı bir ağ ortaya çıkar.
+
+----
+
+**At the Core of Connectivity: Bandwidth**
+
+In today's rapidly digitizing world, information transfer and communication play a pivotal role. In this communication process, a critical criterion determining the performance of computer networks exists: "bandwidth." In this article, we will focus on foundational information to understand the concept of bandwidth.
+
+**What is Bandwidth?**
+
+Bandwidth refers to the maximum amount of data that a communication channel or network connection can carry within a specific period. It is typically measured in terms of the number of bits per second (bps). For example, a network connection with 100 Mbps bandwidth implies that the connection can carry 100 megabits of data within one second.
+
+**Types of Bandwidth**
+
+1. **Upstream and Downstream:**
+   - Upstream denotes the data transfer from the user's device to the network.
+   - Downstream refers to the data transfer from the network to the user's device.
+
+2. **Symmetric and Asymmetric:**
+   - Symmetric bandwidth indicates equal upload and download speeds.
+   - Asymmetric bandwidth implies different upload and download speeds. For instance, home internet connections often use asymmetric bandwidth.
+
+**Bandwidth and Communication Performance**
+
+The bandwidth of a network influences overall communication performance. Higher bandwidth enables faster data transmission and improved network performance. This characteristic is particularly crucial in applications requiring significant data transfers, online gaming, and HD video streaming.
+
+However, bandwidth is just one factor among many. Other factors affecting overall network performance include the network topology, the quality of equipment used, traffic management, and security measures.
+
+**In Conclusion**
+
+Bandwidth is one of the cornerstones of contemporary digital life. The increasing use of the internet underscores the importance of high data transfer speeds. Nevertheless, when evaluating a network's performance, bandwidth is not the sole consideration. When all these elements come together, a robust communication infrastructure and a high-performance network emerge.
