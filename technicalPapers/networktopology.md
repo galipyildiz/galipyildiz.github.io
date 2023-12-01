@@ -8,6 +8,8 @@ Ağ topolojisi, bir ağ içindeki cihazların düzenini tanımlar. Hem fiziksel 
 
 **Yaygın Ağ Topolojileri:**
 
+![networktopology](/resources/networktopology.png)
+
 1. **Yıldız Topolojisi:**
    - Yıldız topolojisinde, cihazlar merkezi bir hub veya switch'e bağlıdır. Bu merkezi nokta, odak iletişim noktası olarak hizmet verir ve her cihaz doğrudan onunla iletişim kurar. Bu tasarım, sorun gidermeyi ve ölçeklendirmeyi kolaylaştırır.
 
@@ -55,6 +57,8 @@ In our interconnected world, network topology serves as the fundamental blueprin
 Network topology refers to the arrangement of devices and their interconnections within a network. It encompasses both physical and logical layouts, detailing how data is transmitted between devices. The choice of topology impacts how efficiently information is exchanged and how resilient the network is in the face of failures.
 
 **Common Types of Network Topology:**
+
+![networktopology](/resources/networktopology.png)
 
 1. **Star Topology:**
    - In a star topology, devices are connected to a central hub or switch. This central point serves as the focal communication hub, and each device communicates directly with it. This design facilitates easy troubleshooting and scalability.
