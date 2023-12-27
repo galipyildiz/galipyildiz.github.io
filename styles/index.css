@@ -45,6 +45,8 @@ body {
 
 .textColor {
     color: #9c9c9c;
+    min-width: 250px;
+    max-width: 500px;
 }
 
 .underLine {
