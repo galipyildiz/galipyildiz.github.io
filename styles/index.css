@@ -89,6 +89,14 @@ main {
 	margin: 20px auto;
 }
 
+.helper-box {
+	width: 70%;
+	min-height: 300px;
+	max-width: 92%;
+    min-width: 300px;
+	margin: 20px auto;
+}
+
 .box::after {
 	content: "";
 	position: absolute;
