@@ -40,7 +40,7 @@ const listRepos = async (repos) => {
         button.classList.add("alt");  
       }
       
-      button.text = "See";
+      button.text = "Look";
       button.target = "_blank";
       repoDiv.appendChild(button);
 
