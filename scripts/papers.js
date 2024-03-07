@@ -16,18 +16,20 @@ const getTechnicalPapers = async () => {
   } else if (response.status === 403) {
     //forbidden rate limit
     Swal.fire({
-      title: "Github Api Rate Limit Problems. Come back in 1 hour. 60req/1hr",
-      width: 600,
-      padding: "3em",
-      color: "#716add",
-      background: "#fff url(/resources/trees.png)",
-      backdrop: `
-        rgba(0,0,123,0.4)
-        url("/resources/nyan-cat.gif")
-        left top
-        no-repeat
-      `,
-    });
+        title: "Github Api Rate Limit Problems. Come back in 1 hour. 60req/1hr",
+        width: 600,
+        padding: "2em",
+        customClass: {
+          confirmButton: "button alt",
+        },
+        background: "url(/resources/trees.png)",
+        backdrop: `
+        rgba(249,239,170,0.6)
+          url("/resources/nyan-cat.gif")
+          left top
+          no-repeat
+        `,
+      });
   }
 };
 
