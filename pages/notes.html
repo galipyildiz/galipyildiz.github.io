@@ -9,12 +9,7 @@
     <title>Galip Yıldız</title>
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/index.css" />
-    <script
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-      type="text/javascript"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
 
   <body id="top">
@@ -29,13 +24,13 @@
         </div>
       </nav>
     </header>
-    <main >
+    <main>
       <div class="column-wrap">
         <div class="box main-box">
           <div class="box-inner">
             <div class="box toggler frame">
               <div class="screw"></div>
-              <div  class="toggler-inner" data-toggle="top"></div>
+              <div class="toggler-inner" data-toggle="top"></div>
             </div>
           </div>
         </div>
@@ -51,10 +46,11 @@
       </div>
 
       <div class="box helper-box">
-        <h2>Notes</h2>
+        <div id="papers" class="box-inner"></div>
       </div>
     </main>
     <footer></footer>
     <script src="../scripts/index.js"></script>
+    <script src="../scripts/papers.js"></script>
   </body>
 </html>

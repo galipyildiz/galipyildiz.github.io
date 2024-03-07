@@ -4,7 +4,6 @@ const myGithubName = "galipyildiz";
 
 document.addEventListener("DOMContentLoaded", () => {
   getGithubRepos();
-  getTechnicalPapers();
 });
 
 const getGithubRepos = async () => {
