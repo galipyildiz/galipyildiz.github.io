@@ -1,3 +1,4 @@
+const myGithubName = "galipyildiz";
 const technicalPapersDirectoryName = "technicalPapers";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -5,26 +6,43 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const getTechnicalPapers = async () => {
-  let endPoint = `https://raw.githubusercontent.com/galipyildiz/galipyildiz.github.io/main/technicalPapers/bandwidth.md`;
+  let endPoint = `https://api.github.com/users/${myGithubName}/${technicalPapersDirectoryName}`;
+  //  let endPoint = `https://raw.githubusercontent.com/galipyildiz/galipyildiz.github.io/main/technicalPapers/bandwidth.md`;
   let response = await fetch(endPoint);
   if (response.ok) {
-    let papers = await response.text();
-    let projectDiv = document.getElementById("papers");
+    console.log(await response.text());
+    // let papers = await response.text();
+    // let projectDiv = document.getElementById("papers");
 
-    let repoDiv = document.createElement("div");
-    repoDiv.className += " box frame";
+    // let repoDiv = document.createElement("div");
+    // repoDiv.className += " box frame";
 
-    let titleHeader = document.createElement("h3");
-    titleHeader.textContent = `Bandwidth`;
+    // let titleHeader = document.createElement("h3");
+    // titleHeader.textContent = `Bandwidth`;
 
-    let content = document.createElement("p");
-    content.innerHTML = marked.parse(papers);
+    // let content = document.createElement("p");
+    // content.innerHTML = marked.parse(papers);
 
-    repoDiv.appendChild(titleHeader);
-    repoDiv.appendChild(content);
+    // repoDiv.appendChild(titleHeader);
+    // repoDiv.appendChild(content);
 
-    projectDiv.appendChild(repoDiv);
+    // projectDiv.appendChild(repoDiv);
     // listPapers(papers);
+  } else if (response.status === 403) {
+    //forbidden rate limit
+    Swal.fire({
+      title: "Github Api Rate Limit Problems. Come back in 1 hour. 60req/1hr",
+      width: 600,
+      padding: "3em",
+      color: "#716add",
+      background: "#fff url(/resources/trees.png)",
+      backdrop: `
+        rgba(0,0,123,0.4)
+        url("/resources/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+    });
   }
 };
 

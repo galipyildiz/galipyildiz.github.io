@@ -12,6 +12,22 @@ const getGithubRepos = async () => {
   if (response.ok) {
     let repos = await response.json();
     await listRepos(repos);
+  } else if (response.status === 403) {
+    //forbidden rate limit
+    Swal.fire({
+      title: "Github Api Rate Limit Problems. Come back in 1 hour. 60req/1hr",
+      width: 600,
+      padding: "3em",
+      customClass:{
+        confirmButton: 'button alt'
+      },
+      background: "url(/resources/trees.png)",
+      backdrop: `
+        url("/resources/nyan-cat.gif")
+        left top
+        no-repeat
+      `,
+    });
   }
 };
 
@@ -37,9 +53,9 @@ const listRepos = async (repos) => {
       button.href = url;
       button.classList.add("button");
       if (i % 2 != 0) {
-        button.classList.add("alt");  
+        button.classList.add("alt");
       }
-      
+
       button.text = "Look";
       button.target = "_blank";
       repoDiv.appendChild(button);
