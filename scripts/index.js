@@ -17,7 +17,7 @@ const toggle = () => {
 
   elements.forEach((element) => {
   
-    if (JSON.parse(clickedbefore) == true) {
+    if (JSON.parse(clickedbefore) === true) {
       toggleClasses(element);
     }
 
