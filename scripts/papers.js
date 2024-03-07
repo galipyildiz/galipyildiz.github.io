@@ -1,4 +1,5 @@
 const myGithubName = "galipyildiz";
+const repoName = "galipyildiz.github.io";
 const technicalPapersDirectoryName = "technicalPapers";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -6,28 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const getTechnicalPapers = async () => {
-  let endPoint = `https://api.github.com/users/${myGithubName}/${technicalPapersDirectoryName}`;
-  //  let endPoint = `https://raw.githubusercontent.com/galipyildiz/galipyildiz.github.io/main/technicalPapers/bandwidth.md`;
+  let endPoint = `https://api.github.com/repos/${myGithubName}/${repoName}/contents/${technicalPapersDirectoryName}`;
   let response = await fetch(endPoint);
   if (response.ok) {
-    console.log(await response.text());
-    // let papers = await response.text();
-    // let projectDiv = document.getElementById("papers");
-
-    // let repoDiv = document.createElement("div");
-    // repoDiv.className += " box frame";
-
-    // let titleHeader = document.createElement("h3");
-    // titleHeader.textContent = `Bandwidth`;
-
-    // let content = document.createElement("p");
-    // content.innerHTML = marked.parse(papers);
-
-    // repoDiv.appendChild(titleHeader);
-    // repoDiv.appendChild(content);
-
-    // projectDiv.appendChild(repoDiv);
-    // listPapers(papers);
+    let papers = await response.json();
+    let papersNames = getPapersNames(papers);
+    listPapers(papersNames);
   } else if (response.status === 403) {
     //forbidden rate limit
     Swal.fire({
@@ -46,39 +31,36 @@ const getTechnicalPapers = async () => {
   }
 };
 
-const listPapers = (papers) => {
-  let papersDiv = document.getElementById("papers");
+const getPapersNames = (papers) => {
+  let result = [];
+  papers.forEach((element) => {
+    result.push(element.name);
+  });
+  return result;
+};
 
-  for (let i = 0; i < papers.length; i++) {
-    let paperName = formatPaperName(papers[i].name);
-    let listItem = document.createElement("a");
-    listItem.textContent = `${i + 1} - ${paperName}`;
-    listItem.className += " textColor";
+const listPapers = async (papersNames) => {
+  for (let paperName of papersNames) {
+    let endPoint = `https://raw.githubusercontent.com/${myGithubName}/${repoName}/main/${technicalPapersDirectoryName}/${paperName}`;
+    let response = await fetch(endPoint);
+    let paper = await response.text();
+    let projectDiv = document.getElementById("papers");
+    let repoDiv = document.createElement("div");
+    repoDiv.className += "box frame";
 
-    let url = getPaperUrl(papers[i]);
-    listItem.href = url;
+    let titleHeader = document.createElement("h3");
+    let paperNameTitle = formatPaperName(paperName);
+    titleHeader.textContent = paperNameTitle;
+    repoDiv.appendChild(titleHeader);
 
-    papersDiv.appendChild(listItem);
+    let content = document.createElement("div");
+    content.innerHTML = marked.parse(paper);
+    content.style.maxWidth = "30vw"; //??
+    content.style.overflowX = "auto";
+    repoDiv.appendChild(content);
+
+    projectDiv.appendChild(repoDiv);
   }
-};
-
-const getPaperUrl = (paper) => {
-  if (window.location.hostname == "127.0.0.1") {
-    return getLocalPaperUrl(paper.name);
-  } else {
-    return getRemotePaperUrl(paper.name);
-  }
-};
-
-const getRemotePaperUrl = (paperName) => {
-  let replacedName = paperName.replace(".md", ".html");
-  let url = `https://galipyildiz.github.io/${technicalPapersDirectoryName}/${replacedName}`;
-  return url;
-};
-
-const getLocalPaperUrl = (paperName) => {
-  let url = `http://127.0.0.1:5500/${technicalPapersDirectoryName}/${paperName}`;
-  return url;
 };
 
 const formatPaperName = (filename) => {
