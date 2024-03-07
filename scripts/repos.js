@@ -30,11 +30,20 @@ const listRepos = async (repos) => {
 
       let titleHeader = document.createElement("h3");
       titleHeader.textContent = `${repos[i].name} - ${languages}`;
-
       repoDiv.appendChild(titleHeader);
 
-      // let url = getListItemUrl(repos[i]);
-      // listItem.href = url;
+      let button = document.createElement("a");
+      let url = getListItemUrl(repos[i]);
+      button.href = url;
+      button.classList.add("button");
+      if (i % 2 != 0) {
+        button.classList.add("alt");  
+      }
+      
+      button.text = "See";
+      button.target = "_blank";
+      repoDiv.appendChild(button);
+
       projectDiv.appendChild(repoDiv);
     }
   }
