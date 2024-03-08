@@ -516,3 +516,9 @@ textarea:focus {
 textarea::placeholder {
     color:var(--light);
 }
+
+.social-div{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
