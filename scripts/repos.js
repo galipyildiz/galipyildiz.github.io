@@ -38,8 +38,7 @@ const listRepos = async (repos) => {
 
   for (let i = 0; i < repos.length; i++) {
     if (
-      repos[i].name != readmeMdRepoName &&
-      repos[i].name != githubIOWebPageRepoName
+      repos[i].name != readmeMdRepoName
     ) {
       let repoDiv = document.createElement("div");
       repoDiv.className += " box frame";
