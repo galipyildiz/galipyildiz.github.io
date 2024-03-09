@@ -37,9 +37,7 @@ const listRepos = async (repos) => {
   repos = repos.sort((a, b) => a.id - b.id);
 
   for (let i = 0; i < repos.length; i++) {
-    if (
-      repos[i].name != readmeMdRepoName
-    ) {
+    if (repos[i].name != readmeMdRepoName) {
       let repoDiv = document.createElement("div");
       repoDiv.className += " box frame";
       let languages = await getRepoLanguages(repos[i].languages_url);
