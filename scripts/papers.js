@@ -11,6 +11,7 @@ const getTechnicalPapers = async () => {
   let response = await fetch(endPoint);
   if (response.ok) {
     let papers = await response.json();
+    papers = papers.reverse();
     let papersNames = getPapersNames(papers);
     listPapers(papersNames);
   } else if (response.status === 403) {
