@@ -36,4 +36,8 @@ yoga layout => layout engine for ios and android
 
 - https://yogalayout.dev/
 - flex => mevcut ekranda uygulanan elemanın kaplayacağı alan.
+
   - kapsayıcısın değerine göre flex değeri alır. Kapsayıcıda flex değeri olmak zorunda
+
+- flatlist component => sadece ui da görülen verileri hafızada tutar
+- image => kullanmak için style width,heigth verilmeli
