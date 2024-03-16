@@ -34,7 +34,7 @@ const getGithubRepos = async () => {
 
 const listRepos = async (repos) => {
   let projectDiv = document.getElementById("projects");
-  repos = repos.sort((a, b) => a.id - b.id);
+  repos = repos.sort((a, b) => b.id - a.id);
 
   for (let i = 0; i < repos.length; i++) {
     if (repos[i].name != readmeMdRepoName) {
