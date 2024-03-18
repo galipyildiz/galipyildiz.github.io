@@ -39,8 +39,10 @@ const listRepos = async (repos) => {
   for (let i = 0; i < repos.length; i++) {
     if (repos[i].name != readmeMdRepoName) {
       let repoDiv = document.createElement("div");
-      repoDiv.className += " box frame";
+      repoDiv.className += "box frame";
       let languages = await getRepoLanguages(repos[i].languages_url);
+      repoDiv.style.maxWidth = "55vw"; 
+      repoDiv.style.overflowX = "auto";
 
       let titleHeader = document.createElement("h3");
       titleHeader.textContent = `${repos[i].name} - ${languages}`;
