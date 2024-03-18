@@ -41,6 +41,8 @@ const getNotes = async () => {
         let noteDiv = document.createElement("div");
         noteDiv.className += "box frame";
         noteDiv.innerText = result.attributes.text;
+        noteDiv.style.maxWidth = "55vw"; //??
+        noteDiv.style.overflowX = "auto";
         let createdAt = result.createdAt.toLocaleDateString("en-UK", {
           year: "numeric",
           month: "long",
