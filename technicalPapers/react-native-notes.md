@@ -25,6 +25,7 @@ npm run android
 #### Useful resources
 
 - https://reactnative.dev/docs/components-and-apis
+- https://reactnative.directory/
 
 #### Useful libraries
 
