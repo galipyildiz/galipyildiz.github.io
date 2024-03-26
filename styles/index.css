@@ -521,3 +521,6 @@ textarea:focus {
 textarea::placeholder {
     color:var(--light);
 }
+.social a{
+	margin: 10px;
+}
