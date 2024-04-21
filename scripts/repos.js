@@ -45,8 +45,12 @@ const listRepos = async (repos) => {
       repoDiv.style.overflowX = "auto";
 
       let titleHeader = document.createElement("h3");
-      titleHeader.textContent = `${repos[i].name} - ${languages}`;
+      titleHeader.textContent = `${repos[i].name}`;
       repoDiv.appendChild(titleHeader);
+
+      let paragraph = document.createElement("p");
+      paragraph.textContent = "Tech Stack: " + languages;
+      repoDiv.appendChild(paragraph);
 
       let button = document.createElement("a");
       let url = getListItemUrl(repos[i]);
